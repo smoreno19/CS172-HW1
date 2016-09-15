@@ -32,12 +32,17 @@ void ex02() {
 
 	int numberOfShares;
 	int value;
+	numberOfShares = 0;
+	value = 0;
 	cout << "Please enter a value: /n";
 	cin >> value;
 	if (value < 100)
 		cout << "The value is less than 100." << value;
 
 	int bookWidth, boxWidth, answer;
+	bookWidth = 0;
+	boxWidth = 0;
+	answer = 0;
 	cout << "Please enter a width of a book:\n";
 	cout << "Please enter a width of a box:\n";
 	cin >> bookWidth;
