@@ -8,14 +8,19 @@
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
+#include <string>
+#include <cctype>
+
 using namespace std;
 
 void ex02();
 void ex03();
+void ex04();
 
 int main() {
 	ex02();
 	ex03();
+	ex04();
 	return 0;
 
 }
@@ -80,7 +85,7 @@ void ex02() {
 
 }
 void ex03() {
-	double area, diagonal;
+	/*double area, diagonal;
 	int length, Hyp;
 	Hyp = 0;
 	diagonal = 0;
@@ -92,7 +97,34 @@ void ex03() {
 	Hyp = (pow(length, 2))*2;
 	diagonal = sqrt(Hyp);
 	cout <<"The length of the square is: " << length << endl;
-	cout << "The diagonal of the square is: " << diagonal << endl;
+	cout << "The diagonal of the square is: " << diagonal << endl;*/
+
+	cout << "Are you a girl? (Y or N) ";
+	char ch;
+	cin >> ch;
+	if (ch == 'Y')
+		cout << "Yes"<< endl;
+	else
+		cout << "No" << endl;
+
+	string mailingAddress;	
+	cout << "What is your current address? " << endl;
+	cin >> mailingAddress;
+	cout << "Your address is: " << mailingAddress << endl;
+
+
+}
+
+void ex04()
+{
+	int number;
+	cout << "Please enter a number between 1-10: ";
+	cin >> number;
+	while (number < 1 || number > 10)
+	{
+		cout << "Please try again: ";
+		cin >> number;
+	}
 
 
 }
