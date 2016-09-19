@@ -16,11 +16,13 @@ using namespace std;
 void ex02();
 void ex03();
 void ex04();
+void ex05();
 
 int main() {
 	ex02();
 	ex03();
 	ex04();
+	ex05();
 	return 0;
 
 }
@@ -109,12 +111,33 @@ void ex03() {
 
 	string mailingAddress;	
 	cout << "What is your current address? " << endl;
-	cin >> mailingAddress;
+	getline(cin,mailingAddress);
 	cout << "Your address is: " << mailingAddress << endl;
 
 
-}
+//}
+void ex04Integer(int sum)
+{
+	int total = 0;
+	total = sum * 2;
+	cout << total;
+	cout << endl;
 
+}
+int add()
+{
+	int summation = 0;
+	srand(time(0));
+	int x = rand() % 10;
+	int y = rand() % 10;
+	summation = x + y;
+	return summation;
+}
+void parameter(int x, int y)
+{
+	x + 1;
+	y + 1;
+}
 void ex04()
 {
 	int number;
@@ -127,15 +150,33 @@ void ex04()
 	}
 	int sum = 0;
 	sum = number * 3;
-	cout << "The cubic sum of the number is " << sum;
+	cout << "The cubic sum of the number is " << sum << endl;
 	do {
-		sum += '*';
-		cout << '*' << endl;
-	} while (sum !=0);
-
-	int count;
+		sum--;
+		cout << '*';
+	
+	} while (sum > 0);
+	cout << endl;
+	int count =0;
 	for (int i = 0; i <= 40; i++)
 	{
-		count+= i;
+		if (count % 2 ==0) {
+			cout << count << " " ;
+		}
+		count++; cout << "";
+	}
+	cout << endl;
+	ex04Integer(number);
+	add();
+parameter(5,6);
+}
+
+
+void ex05()
+{
+
+	for (int i = 0; i > 5; i++) {
+		cout << "Please enter 5 integers: " << endl;
+		cin >> i;
 	}
 }
