@@ -24,7 +24,6 @@ int main() {
 	ex04();
 	ex05();
 	return 0;
-
 }
 
 void ex02() {
@@ -36,14 +35,15 @@ void ex02() {
 	int x = rand() % 10;
 	int y = rand() % 10;
 	cout << "X = "<< x << " and Y = " << y << endl;
-	if (x >= y) {
-		
+	if (x > y) {
+
 		cout << "The number for x, " << x << " is greater than the number for  y " << y << endl;
 	}
+	else if (x == y)
+		cout << "X and Y are equal to each other." << endl;
 	else
 		cout << "X is not greater than or equal to Y.\n";
 		
-
 	int numberOfShares;
 	int value;
 	numberOfShares = 0;
@@ -88,7 +88,7 @@ void ex02() {
 }
 void ex03() {
 	double area, diagonal;
-	int length, Hyp;
+	double length, Hyp;
 	Hyp = 0;
 	diagonal = 0;
 	length = 0;
@@ -109,13 +109,13 @@ void ex03() {
 	else
 		cout << "No" << endl;
 
-	string mailingAddress;	
+	std::string mailingAddress;	
 	cout << "What is your current address? " << endl;
-	getline(cin,mailingAddress);
+	cin >> mailingAddress;
 	cout << "Your address is: " << mailingAddress << endl;
 
 
-//}
+}
 void ex04Integer(int sum)
 {
 	int total = 0;
@@ -171,12 +171,18 @@ void ex04()
 parameter(5,6);
 }
 
-
 void ex05()
 {
-
-	for (int i = 0; i > 5; i++) {
+	const int NumberofIntegers = 5;
+	double numbers[NumberofIntegers];
+	double sum = 0;
+	double product = 1;
+	for (int i = 1; i <= NumberofIntegers; i++) {
 		cout << "Please enter 5 integers: " << endl;
-		cin >> i;
+		cin >> numbers[i];
+		sum += numbers[i];
+		product = product * numbers[i];
 	}
+	cout << "The sum of the integers is " << sum << endl;
+	cout << "The product of the integers is " << product << endl;
 }
